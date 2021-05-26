@@ -1,0 +1,32 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "git.autofetch": true,
+    "editor.lineHeight": 24,
+    "editor.fontSize": 16,
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    "files.autoSaveDelay": 0,
+    "files.autoSave": "onFocusChange",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "'Courier New'",
+    "editor.fontLigatures": false,
+    
+    "workbench.settings.openDefaultSettings": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "default",
+            "filenamePattern": "*.html"
+        }
+    ],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ]
+}

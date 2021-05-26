@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true, //mobx修饰器依赖
+        "moduleResolution": "node",
+        "module": "esnext",
+        "target": "es5",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "lib": ["es6", "dom"],
+        "sourceMap": true,
+        "rootDir": ".",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "importHelpers": true,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "allowSyntheticDefaultImports": true,
+        "noUnusedLocals": true,
+        "allowJs": true,
+        "strict": false,
+        //与webpack.resolve.alias作用相同,必须指定baseUrl
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "compileOnSave": false,
+    "include": ["./src/common", "./src/pages"],
+    "exclude": ["node_modules", "build", "dist", "typings"]
+}
