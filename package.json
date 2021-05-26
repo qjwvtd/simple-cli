@@ -16,7 +16,7 @@
         "build:test": "node build/server.js",
         "lint": "eslint {src} --ext .ts,.tsx,.js,jsx",
         "lint_fix": "eslint {src} --ext .ts,.tsx,.js,jsx --fix",
-        "server": "node build/server.js",
+        "mock": "node build/server.js",
         "setBaseUrl": "node build/setBaseUrl.js"
     },
     "dependencies": {

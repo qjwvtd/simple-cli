@@ -1,19 +1,39 @@
 import React from 'react';
-import { Typography } from 'antd';
-import {getProject } from '@/common/api/project';
+import { Typography, Button } from 'antd';
+import { getAntd, getOther } from '@/common/api';
 const { Text } = Typography;
 
 const Module3: React.FC = () => {
+    const [desc, setDesc] = React.useState<string>('');
+    const [href, setHref] = React.useState<string>('');
+    const [other, setOther] = React.useState<any>(null);
     React.useEffect(() => {
-        getProject().then((res) => {
+        getAntd().then((res) => {
             console.log(res);
+            const resDesc = res?.data?.desc;
+            const resHref = res?.data?.href;
+            if (resDesc) {
+                setDesc(resDesc);
+            }
+            if (resHref) {
+                setHref(resHref);
+            }
         });
     }, []);
     return <Text strong>
-        2022 届校招火热进行中 ❤️ 如果你擅长
-        React/Vue/Angular/JavaScript，热爱前端开发和开源技术氛围，追求极致的用户体验，欢迎发简历到
-        mochen.zy@alibaba-inc.com，加入蚂蚁集团体验技术部，参与 Ant Design/Umi/语雀/AntV
-        的开发，和支付宝一起成长。
+        <h4><b>Antd</b></h4>
+        <p><a href={href}>{desc}</a></p>
+        {
+            other ?
+                JSON.stringify(other) :
+                <Button type="primary" onClick={() => {
+                    getOther().then((res) => {
+                        if (res) {
+                            setOther(res);
+                        }
+                    });
+                }}>get other</Button>
+        }
     </Text>;
 };
 export default Module3;

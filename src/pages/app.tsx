@@ -14,15 +14,15 @@ export default function View() {
             <Row>
                 <Col span={12} offset={6}>
                     <Button type="primary">
-                        <Link to="module1">module1</Link>
+                        <Link to="module1">React</Link>
                     </Button>
                 &nbsp;
                     <Button type="primary">
-                        <Link to="module2">module2</Link>
+                        <Link to="module2">Typescript</Link>
                     </Button>
                 &nbsp;
                     <Button type="primary">
-                        <Link to="module3">module3</Link>
+                        <Link to="module3">Antd</Link>
                     </Button>
                 </Col>
             </Row>
