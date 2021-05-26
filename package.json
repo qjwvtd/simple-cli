@@ -14,8 +14,8 @@
         "build": "cross-env NODE_ENV=production webpack -p --config ./build/webpack.prod.js --progress",
         "dev:test": "npm start",
         "build:test": "node build/server.js",
-        "lint": "eslint {src} --ext .ts,.tsx,.js,jsx",
-        "lint_fix": "eslint {src} --ext .ts,.tsx,.js,jsx --fix",
+        "lint": "eslint {src} --ext .ts,.tsx,.js,.jsx",
+        "lint_fix": "eslint {src} --ext .ts,.tsx,.js,.jsx --fix",
         "mock": "node build/server.js",
         "setBaseUrl": "node build/setBaseUrl.js"
     },
