@@ -21,8 +21,8 @@ const Module3: React.FC = () => {
         });
     }, []);
     return <Text strong>
-        <h4><b>Antd</b></h4>
-        <p><a href={href}>{desc}</a></p>
+        <h4><b>Ant Design of React</b></h4>
+        <p><a href={href} target="_blank">{desc}</a></p>
         {
             loginInfo ?
                 JSON.stringify(loginInfo) :

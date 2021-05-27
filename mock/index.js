@@ -6,8 +6,12 @@ module.exports = {
     },
     'GET /api/typescript': (req, res) => {
         const result = {
-            href: 'https://www.tslang.cn/',
-            desc: 'TypeScript是JavaScript类型的超集，它可以编译成纯JavaScript。'
+            code: 200,
+            data: {
+                href: 'https://www.tslang.cn/',
+                desc: 'TypeScript是JavaScript类型的超集，它可以编译成纯JavaScript。'
+            },
+            message: 'success'
         };
         res.json(result);
     },

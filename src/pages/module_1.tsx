@@ -20,7 +20,7 @@ const Module1: React.FC = () => {
     }, []);
     return <Text strong>
         <h4><b>React</b></h4>
-        <p><a href={ href }>{ desc }</a></p>
+        <p><a href={ href } target="_blank">{ desc }</a></p>
     </Text>;
 };
 export default Module1;

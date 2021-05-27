@@ -18,24 +18,26 @@ export default function View() {
             <Row>
                 <Col span={12} offset={6}>
                     <Button type="primary">
-                        <Link to="module1">React</Link>
+                        <Link to="/module1">React</Link>
                     </Button>
                 &nbsp;
                     <Button type="primary">
-                        <Link to="module2">Typescript</Link>
+                        <Link to="/module2">Typescript</Link>
                     </Button>
                 &nbsp;
                     <Button type="primary">
-                        <Link to="module3">Antd</Link>
+                        <Link to="/module3">Antd</Link>
                     </Button>
                 </Col>
             </Row>
             <Suspense fallback={<Spin />}>
                 <Switch>
-                    <Route exact path="/module1" component={Module1} />
-                    <Route path="/module2" component={Module2} />
-                    <Route path="/module3" component={Module3} />
-                    <Route path="/error" component={Error} />
+                    <Route path="/" component={Module1}>
+                        <Route exact path="/module1" component={Module1} />
+                        <Route path="/module2" component={Module2} />
+                        <Route path="/module3" component={Module3} />
+                        <Route path="/error" component={Error} />
+                    </Route>
                     <Route component={PageNoFind} />
                 </Switch>
             </Suspense>
