@@ -11,13 +11,15 @@
 
 +public : 热更新目录
 
++mock : mock数据
+
 +src : 工作目录
 
-    +common : 公共库,JS,接口, 工具类,store等
+    +common : 公共库, 路由, JS, 接口, 工具类, store等
 
     +assets : 静态资源,图片,CSS,字体文件等,使用less作为CSS预处理语言
 
-    +view : 源文件目录
+    +pages : 源文件目录
 ```
 
 ##--------------华丽的分界线--------------
@@ -27,43 +29,46 @@
 ###[开发环境||部署前||发布前]安装依赖
 
 ```
-*npm install / yarn install
+*npm/yarn install
 ```
 
 ###[开发环境||部署前||发布前]手动设置接口请求地址
 
 ```
-*npm run setBaseUrl 接口地址[如: npm run setBaseUrl https://www.baidu.com]
+*npm/yarn run setBaseUrl 接口地址[如: npm/yarn run setBaseUrl https://www.baidu.com]
 ```
 
-###[开发环境]开启本地服务
+###[开发环境]
 
 ```
-*npm start
+*开启本地mock[如果需要]
+*npm/yarn run mock
+*开启本地服务
+*npm/yarn start
 *访问http://localhost:2333
 ```
 
 ###[开发环境||部署前||发布前]手动一键修复错误
 
 ```
-*npm run lint
+*npm/yarn run lint
 ```
 
 ###[生产环境||部署前||发布前]打包构建,生成 dist 目录
 
 ```
-*npm run build
+*npm/yarn run build
 ```
 
 ###[生产环境||部署前||发布前]相关步骤
 
 ```
 
-#1,npm install
+#1,npm/yarn install
 
-#2,npm run setBaseUrl 接口地址[如: npm run setBaseUrl https://www.baidu.com]
+#2,npm/yarn run setBaseUrl 接口地址[如: npm/yarn run setBaseUrl https://www.baidu.com]
 
-#3,npm run build
+#3,npm/yarn run build
 
 #4,将构建产生的dist目录发布至线上
 

@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const webpackConfig = require('./webpack.common.js');
-const base = require('./../config.ts');
+const base = require('./../config.js');
 
 //定义环境变量
 const defineMyEnv = new webpack.DefinePlugin({

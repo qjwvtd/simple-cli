@@ -7,6 +7,10 @@ import { Spin, Button, Row, Col } from 'antd';
 const Module1 = lazy(() => import('@/pages/module_1'));
 const Module2 = lazy(() => import('@/pages/module_2'));
 const Module3 = lazy(() => import('@/pages/module_3'));
+//error
+const Error = lazy(() => import('@/pages/exception/error'));
+//404
+const PageNoFind = lazy(() => import('@/pages/exception/404'));
 
 export default function View() {
     return <Fragment>
@@ -31,6 +35,8 @@ export default function View() {
                     <Route exact path="/module1" component={Module1} />
                     <Route path="/module2" component={Module2} />
                     <Route path="/module3" component={Module3} />
+                    <Route path="/error" component={Error} />
+                    <Route component={PageNoFind} />
                 </Switch>
             </Suspense>
         </Router>

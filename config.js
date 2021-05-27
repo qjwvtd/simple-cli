@@ -4,7 +4,7 @@ const packJson = require('./package.json');
 //接口请求地址
 const baseUrl = 'https://saas-dev.dhwork.cn';
 module.exports = {
-    name: '项目名称',
+    name: '我的项目',
     version: packJson.version,
     baseUrl: baseUrl,
     src: path.resolve(__dirname, 'src'),

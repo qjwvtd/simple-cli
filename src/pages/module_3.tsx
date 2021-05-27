@@ -1,12 +1,12 @@
 import React from 'react';
 import { Typography, Button } from 'antd';
-import { getAntd, getOther } from '@/common/api';
+import { getAntd, login } from '@/common/api';
 const { Text } = Typography;
 
 const Module3: React.FC = () => {
     const [desc, setDesc] = React.useState<string>('');
     const [href, setHref] = React.useState<string>('');
-    const [other, setOther] = React.useState<any>(null);
+    const [loginInfo, setLoginInfo] = React.useState<any>(null);
     React.useEffect(() => {
         getAntd().then((res) => {
             console.log(res);
@@ -24,15 +24,15 @@ const Module3: React.FC = () => {
         <h4><b>Antd</b></h4>
         <p><a href={href}>{desc}</a></p>
         {
-            other ?
-                JSON.stringify(other) :
+            loginInfo ?
+                JSON.stringify(loginInfo) :
                 <Button type="primary" onClick={() => {
-                    getOther().then((res) => {
+                    login().then((res) => {
                         if (res) {
-                            setOther(res);
+                            setLoginInfo(res);
                         }
                     });
-                }}>get other</Button>
+                }}>Login</Button>
         }
     </Text>;
 };

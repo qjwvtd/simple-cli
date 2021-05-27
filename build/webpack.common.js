@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const base = require('../config.ts');
+const base = require('../config.js');
 const __rules = require('./webpack.common.loaders.js');
 
 const env = require('./env');

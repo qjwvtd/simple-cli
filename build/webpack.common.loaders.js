@@ -5,7 +5,7 @@
 
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const config = require('../config.ts');
+const config = require('../config.js');
 //工作空间
 const __include__dirname = path.resolve(__dirname, config.src);
 if (!__include__dirname) {

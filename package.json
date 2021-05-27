@@ -16,7 +16,7 @@
         "build:test": "node build/server.js",
         "lint": "eslint {src} --ext .ts,.tsx,.js,.jsx",
         "lint_fix": "eslint {src} --ext .ts,.tsx,.js,.jsx --fix",
-        "mock": "node build/server.js",
+        "mock": "supervisor build/server.js",
         "setBaseUrl": "node build/setBaseUrl.js"
     },
     "dependencies": {
@@ -27,6 +27,7 @@
         "react-dom": "^16.14.0",
         "react-router-dom": "^5.2.0",
         "save-dev": "^0.0.1-security",
+        "supervisor": "^0.12.0",
         "typescript": "3.9",
         "typescript-eslint-parser": "^22.0.0"
     },
