@@ -35,6 +35,9 @@ const webpackConfig = {
         rules: __rules
     },
 	productionSourceMap: !isProduction, //关闭生产环境下的SourceMap映射文件
+	css: {         
+		sourceMap: !isProduction // css sourceMap 配置 
+	},
     // externals: {
     //     "react": "react",
     //     "react-dom": "react-dom"
