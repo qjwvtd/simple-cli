@@ -8,6 +8,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 const base = require('../config.js');
 const __rules = require('./webpack.common.loaders.js');
+const isProduction = process.env.NODE_ENV === 'production'
 
 const env = require('./env');
 
@@ -33,6 +34,7 @@ const webpackConfig = {
         //noParse: /jquery|loadsh/,es5代码不需要打包
         rules: __rules
     },
+	productionSourceMap: !isProduction, //关闭生产环境下的SourceMap映射文件
     // externals: {
     //     "react": "react",
     //     "react-dom": "react-dom"
